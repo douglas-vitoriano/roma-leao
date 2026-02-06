@@ -41,6 +41,7 @@
         background: white;
         position: relative;
         overflow: hidden;
+        padding: 1rem;
       }
 
       .hero::before {
@@ -57,12 +58,9 @@
       }
 
       @keyframes pulse {
-
-        0%,
-        100% {
+        0%, 100% {
           opacity: 0.5;
         }
-
         50% {
           opacity: 1;
         }
@@ -73,11 +71,12 @@
         z-index: 1;
         text-align: center;
         padding: 2rem;
+        width: 100%;
       }
 
       .main-logo {
         font-family: 'Bebas Neue', sans-serif;
-        font-size: clamp(4rem, 15vw, 12rem);
+        font-size: clamp(3rem, 12vw, 12rem);
         font-weight: 900;
         letter-spacing: 0.1em;
         background: linear-gradient(135deg, var(--color-5), var(--color-3));
@@ -94,7 +93,6 @@
           opacity: 0;
           transform: translateY(30px);
         }
-
         to {
           opacity: 1;
           transform: translateY(0);
@@ -102,12 +100,14 @@
       }
 
       .hero-imagotipo {
-        margin-top: -50px;
+        max-width: 90%;
+        height: auto;
+        margin-top: -20px;
         animation: fadeInUp 1s ease-out 0.2s both;
       }
 
       .section {
-        padding: 5rem 2rem;
+        padding: 3rem 1rem;
         position: relative;
       }
 
@@ -121,17 +121,17 @@
 
       .section-title {
         font-family: 'Bebas Neue', sans-serif;
-        font-size: clamp(2.5rem, 6vw, 4rem);
+        font-size: clamp(2rem, 8vw, 4rem);
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         color: var(--color-5);
         letter-spacing: 0.15em;
       }
 
       .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 3rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
         max-width: 1400px;
         margin: 0 auto;
       }
@@ -140,10 +140,9 @@
         background: white;
         border: 2px solid var(--color-3);
         border-radius: 20px;
-        padding: 3rem;
+        padding: 2rem;
         transition: all 0.4s ease;
         backdrop-filter: blur(10px);
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -151,42 +150,40 @@
       }
 
       .brand-card:hover {
-        transform: translateY(-10px);
+        transform: translateY(-5px);
         border-color: var(--color-5);
         box-shadow: 0 20px 60px rgba(74, 191, 217, 0.3);
       }
 
       .card-title {
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 2rem;
+        font-size: clamp(1.5rem, 5vw, 2rem);
         color: var(--color-5);
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         letter-spacing: 0.1em;
       }
 
       .card-description {
-        font-size: 0.95rem;
-        line-height: 1.8;
+        font-size: clamp(0.85rem, 3vw, 0.95rem);
+        line-height: 1.7;
         color: #555;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
       }
 
       /* Logotipo */
       .logotipo {
         display: block;
-        margin-top: 2em;
-        margin-bottom: 2em;
-        
-        max-width: 70%;
-        max-height: 70%;
+        margin: 2rem auto;
+        max-width: 90%;
+        height: auto;
         animation: fadeInUp 1s ease-out 0.2s both;
       }
 
       /* Isotipo - Leão Estilizado */
       .isotipo {
-        max-width: 70%;
-        max-height: 70%;
-        margin-bottom: -25em;
+        max-width: 80%;
+        height: auto;
+        margin: 2rem auto;
       }
 
       .lion-icon {
@@ -206,7 +203,6 @@
         from {
           transform: rotate(0deg);
         }
-
         to {
           transform: rotate(360deg);
         }
@@ -218,20 +214,19 @@
 
       /* Imagotipo */
       .imagotipo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
+        max-width: 90%;
+        height: auto;
+        margin: 1rem auto;
       }
 
       .imagotipo-icon {
-        width: 80px;
-        height: 80px;
+        width: clamp(50px, 15vw, 80px);
+        height: clamp(50px, 15vw, 80px);
       }
 
       .imagotipo-text {
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 4rem;
+        font-size: clamp(2rem, 8vw, 4rem);
         background: linear-gradient(135deg, var(--color-5), var(--color-3));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -246,37 +241,37 @@
 
       .isologo-container {
         display: inline-block;
-        padding: 2rem 3rem;
+        padding: 1.5rem 2rem;
         background: rgba(52, 152, 191, 0.1);
         border: 3px solid var(--color-4);
         border-radius: 50%;
       }
 
       .isologo-icon {
-        width: 100px;
-        height: 100px;
+        width: clamp(60px, 20vw, 100px);
+        height: clamp(60px, 20vw, 100px);
         margin-bottom: 1rem;
       }
 
       .isologo-text {
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 2.5rem;
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
         color: var(--color-5);
         letter-spacing: 0.2em;
       }
 
       /* Monograma */
       .monograma {
-        width: 150px;
-        height: 150px;
-        margin: 0 auto;
+        width: clamp(100px, 30vw, 150px);
+        height: clamp(100px, 30vw, 150px);
+        margin: 1rem auto;
         background: var(--gradient-primary);
         border-radius: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
         font-family: 'Playfair Display', serif;
-        font-size: 5rem;
+        font-size: clamp(3rem, 10vw, 5rem);
         font-weight: 900;
         color: white;
         letter-spacing: -0.05em;
@@ -300,7 +295,6 @@
         0% {
           transform: translateX(-100%) translateY(-100%) rotate(45deg);
         }
-
         100% {
           transform: translateX(100%) translateY(100%) rotate(45deg);
         }
@@ -309,7 +303,7 @@
       /* Anagrama */
       .anagrama {
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 5rem;
+        font-size: clamp(2.5rem, 10vw, 5rem);
         text-align: center;
         letter-spacing: 0.3em;
         background: linear-gradient(135deg, var(--color-5), var(--color-4), var(--color-3));
@@ -320,8 +314,8 @@
 
       /* Pictograma */
       .pictograma {
-        width: 180px;
-        height: 180px;
+        width: clamp(120px, 35vw, 180px);
+        height: clamp(120px, 35vw, 180px);
         margin: 0 auto;
         background: var(--color-2);
         border-radius: 30px;
@@ -337,19 +331,19 @@
         background: rgba(255, 255, 255, 0.03);
         border: 3px solid var(--color-3);
         border-radius: 30px;
-        padding: 3rem;
+        padding: 2rem;
         text-align: center;
       }
 
       .logomarca-icon {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto 2rem;
+        width: clamp(80px, 25vw, 120px);
+        height: clamp(80px, 25vw, 120px);
+        margin: 0 auto 1.5rem;
       }
 
       .logomarca-text {
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 5rem;
+        font-size: clamp(2.5rem, 10vw, 5rem);
         background: linear-gradient(135deg, var(--color-5), var(--color-3));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -359,9 +353,9 @@
       }
 
       .logomarca-tagline {
-        font-size: 1.2rem;
+        font-size: clamp(0.8rem, 3vw, 1.2rem);
         color: var(--color-4);
-        letter-spacing: 0.3em;
+        letter-spacing: 0.2em;
         text-transform: uppercase;
         font-weight: 300;
       }
@@ -369,47 +363,49 @@
       /* Paleta de Cores */
       .color-palette {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
         max-width: 900px;
         margin: 0 auto;
       }
 
       .color-swatch {
         aspect-ratio: 1;
-        border-radius: 20px;
+        border-radius: 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         font-weight: 600;
-        font-size: 1.1rem;
+        font-size: clamp(0.8rem, 3vw, 1.1rem);
         border: 3px solid rgba(255, 255, 255, 0.2);
         transition: all 0.3s ease;
+        padding: 0.5rem;
       }
 
       .color-swatch:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
         border-color: white;
       }
 
       .color-name {
-        margin-top: 1rem;
-        font-size: 0.9rem;
+        margin-top: 0.5rem;
+        font-size: clamp(0.7rem, 2.5vw, 0.9rem);
         opacity: 0.8;
+        text-align: center;
       }
 
       .applications {
         max-width: 1200px;
-        margin: 3rem auto 0;
+        margin: 2rem auto 0;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
       }
 
       .app-card {
         background: rgba(255, 255, 255, 0.05);
-        padding: 2rem;
+        padding: 1.5rem;
         border-radius: 15px;
         border: 2px solid var(--color-3);
         transition: all 0.3s ease;
@@ -417,11 +413,11 @@
 
       .app-card:hover {
         border-color: var(--color-5);
-        transform: translateY(-5px);
+        transform: translateY(-3px);
       }
 
       .app-title {
-        font-size: 1.3rem;
+        font-size: clamp(1.1rem, 4vw, 1.3rem);
         font-weight: 700;
         color: var(--color-5);
         margin-bottom: 1rem;
@@ -429,27 +425,87 @@
 
       .app-mockup {
         width: 100%;
-        height: 150px;
+        height: 120px;
         background: white;
         border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         border: 2px solid var(--color-4);
+        padding: 1rem;
       }
 
-      @media (max-width: 768px) {
-        .imagotipo {
-          flex-direction: column;
-          gap: 1rem;
+      .app-mockup img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+
+      /* Media Queries */
+      @media (min-width: 576px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .applications {
+          grid-template-columns: repeat(2, 1fr);
         }
 
+        .color-palette {
+          grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        }
+      }
+
+      @media (min-width: 768px) {
         .section {
-          padding: 3rem 1rem;
+          padding: 4rem 2rem;
         }
 
         .brand-card {
-          padding: 2rem;
+          padding: 2.5rem;
+        }
+
+        .hero-imagotipo {
+          max-width: 70%;
+          margin-top: -50px;
+        }
+
+        .isotipo {
+          max-width: 70%;
+        }
+
+        .logotipo {
+          max-width: 70%;
+        }
+
+        .imagotipo {
+          max-width: 70%;
+        }
+
+        .app-mockup {
+          height: 150px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .grid {
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .section {
+          padding: 5rem 2rem;
+        }
+
+        .brand-card {
+          padding: 3rem;
+        }
+
+        .applications {
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .color-palette {
+          grid-template-columns: repeat(5, 1fr);
         }
       }
     </style>
@@ -512,7 +568,7 @@
           <h3 class="card-title">Iniciais Entrelaçadas</h3>
           <p class="card-description">O monograma une as letras R e M de forma elegante e sofisticada, criando uma marca
             premium que funciona em aplicações reduzidas como favicons, apps mobile e perfis em redes sociais.</p>
-          <img src="assets/roma_monograma.png" alt="ROMA Representações Comerciais" class="monograma" style="margin-bottom: 40px;" />
+          <img src="assets/roma_monograma.png" alt="ROMA Representações Comerciais" class="monograma" style="margin-bottom: 2rem;" />
           <h2 class="section-title">ou</h2>
           <div class="monograma">RM</div>
         </div>
@@ -553,28 +609,28 @@
         <div class="app-card">
           <h3 class="app-title">Cartão de Visita</h3>
           <div class="app-mockup">
-            <img src="assets/imagotipo.png" alt="Cartão de Visita ROMA" style="width: 60%; height: auto; object-fit: contain;">
+            <img src="assets/imagotipo.png" alt="Cartão de Visita ROMA">
           </div>
         </div>
 
         <div class="app-card">
           <h3 class="app-title">Papel Timbrado</h3>
           <div class="app-mockup">
-            <img src="assets/roma_logotipo1.png" alt="Papel Timbrado ROMA" style="width: 50%; height: auto; object-fit: contain;">
+            <img src="assets/roma_logotipo1.png" alt="Papel Timbrado ROMA">
           </div>
         </div>
 
         <div class="app-card">
           <h3 class="app-title">App Mobile</h3>
           <div class="app-mockup">
-            <img src="assets/output_bg1.png" alt="App Mobile ROMA" style="width: 40%; height: auto; object-fit: contain;">
+            <img src="assets/output_bg1.png" alt="App Mobile ROMA">
           </div>
         </div>
 
         <div class="app-card">
           <h3 class="app-title">Website</h3>
           <div class="app-mockup">
-            <img src="assets/imagotipo2.png" alt="Website ROMA" style="width: 55%; height: auto; object-fit: contain;">
+            <img src="assets/imagotipo2.png" alt="Website ROMA">
           </div>
         </div>
       </div>
