@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROMA - Identidade Visual Completa</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap"
+      rel="stylesheet">
+    <style>
+      :root {
+        --color-1: #213140;
+        --color-2: #144E73;
+        --color-3: #2675A6;
+        --color-4: #3498BF;
+        --color-5: #4ABFD9;
+        --gradient-primary: linear-gradient(135deg, var(--color-2), var(--color-4));
+        --gradient-secondary: linear-gradient(135deg, var(--color-1), var(--color-3));
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background: white;
+        color: #213140;
+        overflow-x: hidden;
+      }
+
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+          radial-gradient(circle at 20% 30%, rgba(52, 152, 191, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 80% 70%, rgba(74, 191, 217, 0.1) 0%, transparent 50%);
+        animation: pulse 8s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+
+        0%,
+        100% {
+          opacity: 0.5;
+        }
+
+        50% {
+          opacity: 1;
+        }
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .main-logo {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(4rem, 15vw, 12rem);
+        font-weight: 900;
+        letter-spacing: 0.1em;
+        background: linear-gradient(135deg, var(--color-5), var(--color-3));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 1rem;
+        animation: fadeInUp 1s ease-out;
+        text-shadow: 0 10px 30px rgba(74, 191, 217, 0.3);
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .hero-imagotipo {
+        margin-top: -50px;
+        animation: fadeInUp 1s ease-out 0.2s both;
+      }
+
+      .section {
+        padding: 5rem 2rem;
+        position: relative;
+      }
+
+      .section:nth-child(even) {
+        background: #f8f9fa;
+      }
+
+      .section:nth-child(odd) {
+        background: white;
+      }
+
+      .section-title {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        text-align: center;
+        margin-bottom: 3rem;
+        color: var(--color-5);
+        letter-spacing: 0.15em;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .brand-card {
+        background: white;
+        border: 2px solid var(--color-3);
+        border-radius: 20px;
+        padding: 3rem;
+        transition: all 0.4s ease;
+        backdrop-filter: blur(10px);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .brand-card:hover {
+        transform: translateY(-10px);
+        border-color: var(--color-5);
+        box-shadow: 0 20px 60px rgba(74, 191, 217, 0.3);
+      }
+
+      .card-title {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 2rem;
+        color: var(--color-5);
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.1em;
+      }
+
+      .card-description {
+        font-size: 0.95rem;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 2rem;
+      }
+
+      /* Logotipo */
+      .logotipo {
+        display: block;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        
+        max-width: 70%;
+        max-height: 70%;
+        animation: fadeInUp 1s ease-out 0.2s both;
+      }
+
+      /* Isotipo - Leão Estilizado */
+      .isotipo {
+        max-width: 70%;
+        max-height: 70%;
+        margin-bottom: -25em;
+      }
+
+      .lion-icon {
+        width: 100%;
+        height: 100%;
+        position: relative;
+      }
+
+      .lion-circle {
+        stroke: var(--color-4);
+        stroke-width: 3;
+        fill: none;
+        animation: rotate 20s linear infinite;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .lion-head {
+        fill: var(--color-5);
+      }
+
+      /* Imagotipo */
+      .imagotipo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .imagotipo-icon {
+        width: 80px;
+        height: 80px;
+      }
+
+      .imagotipo-text {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 4rem;
+        background: linear-gradient(135deg, var(--color-5), var(--color-3));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: 0.15em;
+      }
+
+      /* Isologo */
+      .isologo {
+        text-align: center;
+      }
+
+      .isologo-container {
+        display: inline-block;
+        padding: 2rem 3rem;
+        background: rgba(52, 152, 191, 0.1);
+        border: 3px solid var(--color-4);
+        border-radius: 50%;
+      }
+
+      .isologo-icon {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 1rem;
+      }
+
+      .isologo-text {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 2.5rem;
+        color: var(--color-5);
+        letter-spacing: 0.2em;
+      }
+
+      /* Monograma */
+      .monograma {
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+        background: var(--gradient-primary);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 5rem;
+        font-weight: 900;
+        color: white;
+        letter-spacing: -0.05em;
+        box-shadow: 0 20px 60px rgba(52, 152, 191, 0.4);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .monograma::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        animation: shine 3s infinite;
+      }
+
+      @keyframes shine {
+        0% {
+          transform: translateX(-100%) translateY(-100%) rotate(45deg);
+        }
+
+        100% {
+          transform: translateX(100%) translateY(100%) rotate(45deg);
+        }
+      }
+
+      /* Anagrama */
+      .anagrama {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 5rem;
+        text-align: center;
+        letter-spacing: 0.3em;
+        background: linear-gradient(135deg, var(--color-5), var(--color-4), var(--color-3));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* Pictograma */
+      .pictograma {
+        width: 180px;
+        height: 180px;
+        margin: 0 auto;
+        background: var(--color-2);
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid var(--color-4);
+        box-shadow: 0 10px 40px rgba(74, 191, 217, 0.3);
+      }
+
+      /* Logomarca */
+      .logomarca-full {
+        background: rgba(255, 255, 255, 0.03);
+        border: 3px solid var(--color-3);
+        border-radius: 30px;
+        padding: 3rem;
+        text-align: center;
+      }
+
+      .logomarca-icon {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 2rem;
+      }
+
+      .logomarca-text {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 5rem;
+        background: linear-gradient(135deg, var(--color-5), var(--color-3));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        letter-spacing: 0.15em;
+        margin-bottom: 1rem;
+      }
+
+      .logomarca-tagline {
+        font-size: 1.2rem;
+        color: var(--color-4);
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        font-weight: 300;
+      }
+
+      /* Paleta de Cores */
+      .color-palette {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 2rem;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .color-swatch {
+        aspect-ratio: 1;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 1.1rem;
+        border: 3px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .color-swatch:hover {
+        transform: scale(1.1);
+        border-color: white;
+      }
+
+      .color-name {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      .applications {
+        max-width: 1200px;
+        margin: 3rem auto 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .app-card {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 2rem;
+        border-radius: 15px;
+        border: 2px solid var(--color-3);
+        transition: all 0.3s ease;
+      }
+
+      .app-card:hover {
+        border-color: var(--color-5);
+        transform: translateY(-5px);
+      }
+
+      .app-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--color-5);
+        margin-bottom: 1rem;
+      }
+
+      .app-mockup {
+        width: 100%;
+        height: 150px;
+        background: white;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--color-4);
+      }
+
+      @media (max-width: 768px) {
+        .imagotipo {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .section {
+          padding: 3rem 1rem;
+        }
+
+        .brand-card {
+          padding: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Hero Section -->
+    <div class="hero">
+      <img src="assets/output_bg.png" alt="ROMA. Representações Comerciais" class="hero-imagotipo" />
+    </div>
+
+    <!-- Logotipo -->
+    <section class="section">
+      <h2 class="section-title">Logotipo</h2>
+      <div class="grid">
+        <div class="brand-card">
+          <h3 class="card-title">Logotipo Principal</h3>
+          <p class="card-description">O logotipo ROMA utiliza a tipografia Bebas Neue em caixa alta, com espaçamento amplo
+            entre letras, transmitindo força, modernidade e profissionalismo. O gradiente azul evoca confiança e
+            credibilidade no segmento de suplementos e farmácia.</p>
+          <img src="assets/roma_logotipo1.png" alt="ROMA Representações Comerciais" class="logotipo" />
+        </div>
+      </div>
+    </section> 
+
+    <!-- Isotipo -->
+    <section class="section">
+      <h2 class="section-title">Isotipo</h2>
+      <div class="grid">
+        <div class="brand-card">
+          <h3 class="card-title">Símbolo do Leão</h3>
+          <p class="card-description">O isotipo representa o leão, adaptado com as cores da paleta azul. O leão simboliza
+            liderança, força e confiabilidade - valores essenciais para uma empresa de representações comerciais no setor
+            de saúde.</p>
+          <img src="assets/output_bg1.png" alt="ROMA Representações Comerciais" class="isotipo" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Imagotipo -->
+    <section class="section">
+      <h2 class="section-title">Imagotipo</h2>
+      <div class="grid">
+        <div class="brand-card">
+          <h3 class="card-title">Ícone + Texto</h3>
+          <p class="card-description">O imagotipo combina o símbolo do leão com o nome ROMA, criando uma identidade coesa
+            que funciona perfeitamente em aplicações digitais e impressas, mantendo legibilidade em diversos tamanhos.</p>
+          <img src="assets/imagotipo.png" alt="ROMA Representações Comerciais" class="imagotipo" />
+          <h2 class="section-title">ou</h2>
+          <img src="assets/imagotipo2.png" alt="ROMA Representações Comerciais" class="imagotipo" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Monograma -->
+    <section class="section">
+      <h2 class="section-title">Monograma</h2>
+      <div class="grid">
+        <div class="brand-card">
+          <h3 class="card-title">Iniciais Entrelaçadas</h3>
+          <p class="card-description">O monograma une as letras R e M de forma elegante e sofisticada, criando uma marca
+            premium que funciona em aplicações reduzidas como favicons, apps mobile e perfis em redes sociais.</p>
+          <img src="assets/roma_monograma.png" alt="ROMA Representações Comerciais" class="monograma" style="margin-bottom: 40px;" />
+          <h2 class="section-title">ou</h2>
+          <div class="monograma">RM</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paleta de Cores -->
+    <section class="section">
+      <h2 class="section-title">Paleta de Cores</h2>
+      <div class="color-palette">
+        <div class="color-swatch" style="background: #213140; color: white;">
+          <div>#213140</div>
+          <div class="color-name">Deep Navy</div>
+        </div>
+        <div class="color-swatch" style="background: #144E73; color: white;">
+          <div>#144E73</div>
+          <div class="color-name">Ocean Blue</div>
+        </div>
+        <div class="color-swatch" style="background: #2675A6; color: white;">
+          <div>#2675A6</div>
+          <div class="color-name">Sky Blue</div>
+        </div>
+        <div class="color-swatch" style="background: #3498BF; color: white;">
+          <div>#3498BF</div>
+          <div class="color-name">Bright Blue</div>
+        </div>
+        <div class="color-swatch" style="background: #4ABFD9; color: #213140;">
+          <div>#4ABFD9</div>
+          <div class="color-name">Cyan Light</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Aplicações -->
+    <section class="section">
+      <h2 class="section-title">Aplicações da Marca</h2>
+      <div class="applications">
+        <div class="app-card">
+          <h3 class="app-title">Cartão de Visita</h3>
+          <div class="app-mockup">
+            <img src="assets/imagotipo.png" alt="Cartão de Visita ROMA" style="width: 60%; height: auto; object-fit: contain;">
+          </div>
+        </div>
+
+        <div class="app-card">
+          <h3 class="app-title">Papel Timbrado</h3>
+          <div class="app-mockup">
+            <img src="assets/roma_logotipo1.png" alt="Papel Timbrado ROMA" style="width: 50%; height: auto; object-fit: contain;">
+          </div>
+        </div>
+
+        <div class="app-card">
+          <h3 class="app-title">App Mobile</h3>
+          <div class="app-mockup">
+            <img src="assets/output_bg1.png" alt="App Mobile ROMA" style="width: 40%; height: auto; object-fit: contain;">
+          </div>
+        </div>
+
+        <div class="app-card">
+          <h3 class="app-title">Website</h3>
+          <div class="app-mockup">
+            <img src="assets/imagotipo2.png" alt="Website ROMA" style="width: 55%; height: auto; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
